@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>Collapsible sidebar using Bootstrap 3</title>
+
+		<!-- social media icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Bootstrap CSS CDN -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/portfolio.css">
+		<link rel="stylesheet" href="css/sidebar.css">
+
+	</head>
+	<body>
+
+		<div class="wrapper">
+			<!-- Navigation Bar Holder -->
+			<nav id="navbar" class="sideBarContainer">
+				<div id="sideHeader" class="sidebar-header">
+					<h3>Bootstrap Sidebar</h3>
+				</div>
+
+				<div id="topHeader" class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#optionsList" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Project name</a>
+				</div>
+
+				<div id="optionsList">
+					<ul id="optionsListType" class="list-unstyled components">
+						<li class="menuOption active">
+							<a href="#content">Home</a>
+						</li>
+						<li class="menuOption">
+							<a href="#about">About</a>
+						</li>
+						<li class="menuOption">
+							<a href="#Work">Lorem</a>
+						</li>
+						<li class="menuOption">
+							<a href="#projects">Projects</a>
+						</li>
+						<li>
+							<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+							<ul class="collapse list-unstyled" id="pageSubmenu">
+								<li><a href="#">Page 1</a></li>
+								<li><a href="#">Page 2</a></li>
+								<li><a href="#">Page 3</a></li>
+							</ul>
+						</li>
+						<li class="menuOption">
+							<a href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+
+
+
+			<!-- Page Content Holder -->
+			<div id="content">
+
+				<h2>Collapsible Sidebar Using Bootstrap 3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<div class="line"></div>
+
+				<h2 id="about">About</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<div class="line"></div>
+
+				<h2 id="Work">Lorem ipsum dolor sit amet</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<h2 id="projects">Projects</h2>
+
+					<h3> Battle Blocks </h3>
+					<p> A 3D multiplayer realtime video game.  The purpose of this project was to learn how to schedule, design, and implement complex software in teams.
+					CSE 125 - Software System Design and Implementation </p>
+					<a class="btn btn-primary" href="https://cse125.ucsd.edu/2015/cse125g1/" role="button" target="_blank">Project Website</a>
+					<a class="btn btn-primary" href="https://cse125.ucsd.edu/" role="button" target="_blank">Class Website</a>
+					
+					<ul class="tags">
+						<li>OpenGL</li>
+						<li>UI</li>
+						<li>Photoshop</li>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>Javascript</li>
+					</ul>
+
+					<h3> CSE170 - Human-Computer Interaction </h3>
+					<ul class="tags">
+						<li>OpenGl</li>
+						<li>C/C++</li>
+					</ul>
+
+					<h3> CSE168 Projects - Photo-Realistic Rendering Algorithms </h3>
+					<ul class="tags">
+						<li>C/C++</li>
+					</ul>
+
+					<h3> CSE169 - Computer Animation </h3>
+					<ul class="tags">
+						<li>OpenGl</li>
+						<li>C/C++</li>
+					</ul>
+
+					<h3> CSE 190: Advanced Computer Graphics </h3>
+					<ul class="tags">
+						<li>C/C++</li>
+					</ul>
+
+				<div class="line"></div>
+
+				<footer class="w3-container" id="contact">
+					<p>Contact</p>
+					<a href="mailto:liu.mona.c@gmail.com?Subject=Contact%20from%20Website" class="fa fa-google"></a>
+					<a href="https://www.linkedin.com/in/monica-mona-liu-b96b0766" class="fa fa-linkedin" target="_blank"></a>
+					<a href="https://github.com/liumonac" class="fa fa-github" target="_blank"></a>		
+				</footer>
+			</div>
+
+		</div>
+	</body>
+
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<!-- Bootstrap Js CDN -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="js/portfolio.js"></script>
+</html>

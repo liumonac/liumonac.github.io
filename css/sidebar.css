@@ -1,0 +1,130 @@
+/* ---------------------------------------------------
+	NAVBAR STYLE SMALL SCREEN
+----------------------------------------------------- */
+.navbar-custom {
+	background: #53619b;
+	color: #fff;
+	/*display: none;*/
+}
+
+.icon-bar {
+	background-color: #fff;
+}
+
+.navbar-toggle {
+	border-color: #fff;	
+}
+
+/* ---------------------------------------------------
+	SIDEBAR STYLE
+----------------------------------------------------- */
+
+.sideBarContainer {
+	width: 250px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	z-index: 999;
+	background: #7386D5;
+	color: #fff;
+	transition: all 0.3s;
+}
+
+#navbar.active {
+	margin-left: -250px;
+}
+
+#navbar .sidebar-header {
+	padding: 20px;
+	background: #53619b;
+}
+
+#navbar ul p {
+	color: #fff;
+	padding: 10px;
+}
+
+#navbar ul li a {
+	padding: 10px;
+	font-size: 1.1em;
+	display: block;
+}
+
+#navbar ul li a:hover {
+	color: #7386D5;
+	background: #fff;
+}
+
+#navbar ul li.active > a, a[aria-expanded="true"] {
+	color: #fff;
+	background: #6d7fcc;
+}
+
+
+a[data-toggle="collapse"] {
+	position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+	content: '\e259';
+	display: block;
+	position: absolute;
+	right: 20px;
+	font-family: 'Glyphicons Halflings';
+	font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+	content: '\e260';
+}
+
+
+ul ul a {
+	font-size: 0.9em !important;
+	padding-left: 30px !important;
+	background: #6d7fcc;
+}
+
+ul.CTAs {
+	padding: 20px;
+}
+
+ul.CTAs a {
+	text-align: center;
+	font-size: 0.9em !important;
+	display: block;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+a.download {
+	background: #fff;
+	color: #7386D5;
+}
+a.article, a.article:hover {
+	background: #6d7fcc !important;
+	color: #fff !important;
+}
+
+/* ---------------------------------------------------
+	MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+	#topHeader {
+		display: block;
+	}
+
+	#sideHeader {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	#topHeader {
+		display: none;
+	}
+
+	#sideHeader {
+		display: block;
+	}
+}
