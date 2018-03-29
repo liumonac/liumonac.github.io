@@ -12,7 +12,8 @@ function initializePage() {
 	$(window).resize(checkSize);
 
 	// Add smooth scrolling to sidebar links
-	$("a").click(smoothScroll);
+	$(".menuOption > a").click(smoothScroll);
+	$(".menuOption > ul > li > a").click(smoothScroll);
 
 	//Change active list item
 	$(".menuOption").click(activateItem);

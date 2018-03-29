@@ -36,6 +36,17 @@ a, a:hover, a:focus {
     margin: 40px 0;
 }
 
+.carousel-caption {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-caption p {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+
 
 /* ---------------------------------------------------
     CONTENT STYLE
@@ -48,9 +59,6 @@ a, a:hover, a:focus {
     position: absolute;
     top: 0;
     right: 0;
-}
-#content.active {
-    width: 100%;
 }
 
 /* ---------------------------------------------------
@@ -91,3 +99,32 @@ footer {
     font-size: 13px;
     text-decoration: none;
 }
+
+
+
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .carousel {
+        width: calc(100% - 250px);
+    }
+
+    #content {
+        width: calc(100% - 250px);
+    }
+}    

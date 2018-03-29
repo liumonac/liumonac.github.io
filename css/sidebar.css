@@ -31,10 +31,6 @@
 	transition: all 0.3s;
 }
 
-#navbar.active {
-	margin-left: -250px;
-}
-
 #navbar .sidebar-header {
 	padding: 20px;
 	background: #53619b;
