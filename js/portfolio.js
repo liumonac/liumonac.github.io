@@ -116,3 +116,21 @@ function close_menu() {
     document.getElementById("menuHeader").style.display = "block";
 }
 
+
+/* ---------------------------------------------------
+	Assignment 1 functions
+----------------------------------------------------- */
+function popup(e) {
+	var popupImg = document.getElementById("imgPopup");
+	var imgID = e.getAttribute("data-imgSrc");
+	popupImg.src = document.getElementById(imgID).src;
+	var popupImgWidth = popupImg.width;
+	
+	if (popupImgWidth > 1000 || popupImgWidth == 0) {
+		popupImgWidth = 1000;
+	}
+
+	$('#myModalImg').find('.modal-dialog').css({
+		width: popupImgWidth
+	});
+}

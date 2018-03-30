@@ -1,0 +1,880 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name-"viewport" contenct-"width=device-width, initial-scale=1.0">
+		<title>Monica Liu - Projects</title>
+
+		<!-- Latest compiled and minified CSS Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- custom css files -->
+		<link href="css/portfolio.css" rel="stylesheet">
+		<link href="css/sidebar.css" rel="stylesheet">
+	</head>
+
+
+	<body>
+
+		<!-- Navigation Bar Holder -->
+		<nav id="navbar" class="sideBarContainer">
+			<div id="sideHeader" class="sidebar-header">
+				<h3>Image and Signal Processing</h3>
+			</div>
+
+			<div id="topHeader" class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#optionsList" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Image and Signal Processing</a>
+			</div>
+
+			<div id="optionsList">
+				<ul id="optionsListType" class="list-unstyled components">
+					<li class="menuOption">
+						<a href="#topofpage">Report Home</a>
+					</li>
+					<li class="menuOption active">
+						<a href="#basicOps">Basic Operations</a>
+					</li>
+					<li class="menuOption">
+						<a href="#Quant_Dith">Quantization and Dithering</a>
+					</li>
+					<li class="menuOption lastli">
+						<a href="#Conv_Edge">Basic Convolution and Edge Detection</a>
+					</li>
+				</ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="https://liumonac.github.io/" class="mainPage">Back to Main Page</a></li>
+                </ul>
+			</div>
+		</nav>
+		<!-- End Navigation Bar Holder -->
+
+		<!-- Page Content Holder -->
+		<div id="content">
+
+		<!--popup image-->
+		<div id="myModalImg" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-content modal-body">
+				<img id="imgPopup" src="" class="img-responsive">
+			</div>
+		</div>
+
+		<div class="container">
+			<div id="topofpage" class="page-header">
+				<h1>CSE190: Advanced Computer Graphics</h1> 
+				<h2>Assignment 1 Report: Image and Signal Processing</h2>
+			</div>
+
+			<div>
+				<p>Date: Spring 2015</p>
+				<p>This assignment is the creation of a basic image proccessing program.  It is like a mini photoshop or photo editor</p>
+				<p>Please note that all images on this website are converted to .jpg from the .bmp output of the program.</p>
+			</div>
+
+			<div class="line"></div>
+
+			<div id="basicOps">
+				<h3>Basic Operations</h3>
+				<div id="Brighten">
+					<h4>Image::Brighten</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -brightness [factor] < in.bmp > out.bmp</i>
+						</br>
+						Brightness is controlled by scaling the pixels by the inputed factor.  The factor must be non-negative.  1.0 preserves the image, 0.0 makes it black, and other factors scale up the pixel values.
+					</p>
+					<div class="row">		
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="bright1">
+								<img id="bright1" src="images/CSE190/Assignment1/Brightness/shed_brightness_0.jpg">
+								<p>factor 0.0</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="bright2">
+								<img id="bright2" src="images/CSE190/Assignment1/Brightness/shed_brightness_05.jpg">
+								<p>factor 0.5</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="bright3">
+								<img id="bright3" src="images/CSE190/Assignment1/Brightness/shed_brightness_1.jpg">
+								<p>factor 1.0</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="bright4">
+								<img id="bright4" src="images/CSE190/Assignment1/Brightness/shed_brightness_15.jpg">
+								<p>factor 1.5</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="bright5">
+								<img id="bright5" src="images/CSE190/Assignment1/Brightness/shed_brightness_2.jpg">
+								<p>factor 2.0</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="ChangeContrast">
+					<h4>Image::ChangeContrast</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -contrast [factor] < in.bmp > out.bmp</i>
+						</br>
+						Contrast is controlled by interpolating the pixels between a gray image of the average image luminance and the original image.  A factor of 0.0 outputs the calculated constant gray image, 1.0 gives the original image, and negative values inverts the image.  Values between 0.0 and 1.0 have less contrast, and values greater than 1.0 has higher contrast.
+					</p>
+
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="ct1">
+								<img id="ct1" src="images/CSE190/Assignment1/Contrast/mandrill_contrast_-05.jpg">
+								<p>factor -0.5</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="ct2">
+								<img id="ct2" src="images/CSE190/Assignment1/Contrast/mandrill_contrast_0.jpg">
+								<p>factor 0.0</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="ct3">
+								<img id="ct3" src="images/CSE190/Assignment1/Contrast/mandrill_contrast_05.jpg">
+								<p>factor 0.5</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="ct4">
+								<img id="ct4" src="images/CSE190/Assignment1/Contrast/mandrill_contrast_1.jpg">
+								<p>factor 1.0</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="ct5">
+								<img id="ct5" src="images/CSE190/Assignment1/Contrast/mandrill_contrast_17.jpg">
+								<p>factor 1.7</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="ChangeSaturation">
+					<h4>Image::ChangeSaturation</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -saturation [factor] < in.bmp > out.bmp</i>
+						</br>
+						Saturation is controlled by interpolating the pixels between a gray-scale version of the original image and the original image.  The grayscale image is constructed form the pixel luminance.  Negative values inverts the image hue but keeps the luminance.  A factor of 0.0 outputs the calculated greyscale image, 1.0 preserves the original image, and negative values invert the colors.  Values between 0.0 and 1.0 make the image more gray, and values greater than 1.0 are extrapolated to increase the saturation.</p>
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="sat1">
+								<img id="sat1" src="images/CSE190/Assignment1/Saturation/wave_saturation_-1.jpg">
+								<p>factor -1.0</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="sat2">
+								<img id="sat2" src="images/CSE190/Assignment1/Saturation/wave_saturation_0.jpg">
+								<p>factor 0.0</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="sat3">
+								<img id="sat3" src="images/CSE190/Assignment1/Saturation/wave_saturation_05.jpg">
+								<p>factor 0.5</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="sat4">
+								<img id="sat4" src="images/CSE190/Assignment1/Saturation/wave_saturation_1.jpg">
+								<p>factor 1.0</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="sat5">
+								<img id="sat5" src="images/CSE190/Assignment1/Saturation/wave_saturation_25.jpg">
+								<p>factor 2.5</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="ChangeGamma">
+					<h4>Image::ChangeGamma</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -gamma [factor] < in.bmp > out.bmp</i>
+						</br>
+						Gamma correction adjusts the color of each pixel of the image by the factor.  The factor must be a postitive number.  A factor of 1.0 preserves the original image, values greater than 1 brighten the image, and values less than 1 darken it. </p>
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="gamma1">
+								<img id="gamma1" src="images/CSE190/Assignment1/Gamma/flower_gamma_0.jpg">
+								<p>factor 0.0</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="gamma2">
+								<img id="gamma2" src="images/CSE190/Assignment1/Gamma/flower_gamma_05.jpg">
+								<p>factor 0.5</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="gamma3">
+								<img id="gamma3" src="images/CSE190/Assignment1/Gamma/flower_gamma_1.jpg">
+								<p>factor 1.0</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="gamma4">
+								<img id="gamma4" src="images/CSE190/Assignment1/Gamma/flower_gamma_15.jpg">
+								<p>factor 1.5</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="gamma5">
+								<img id="gamma5" src="images/CSE190/Assignment1/Gamma/flower_gamma_2.jpg">
+								<p>factor 2.0</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="Crop">
+					<h4>Image::Crop</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -crop [x] [y] [w] [h] < in.bmp > out.bmp</i>
+						</br>
+						Cropping is done by selecting a rectangular section of the image at the given starting point up to the size specified.  x and y are the point to begin cropping from, and w and h are the size of the output cropped image.  The x value must be in the range 0 to width-1(left to right) and y must be in the range 0 to height -1 (top to bottom). All parameters must be postive.
+					</p>
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="crop1">
+								<img id="crop1" src="images/CSE190/Assignment1/Crop/mandrill_crop_2.jpg">
+								<p>right eye</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="crop2">
+								<img id="crop2" src="images/CSE190/Assignment1/Crop/mandrill_crop_3.jpg">
+								<p>nose</p>
+							</a>
+						</div>
+
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="crop3">
+								<img id="crop3" src="images/CSE190/Assignment1/Crop/mandrill_crop_1.jpg">
+								<p>left eye</p>
+							</a>
+						</div>
+					</div>
+				</div> 
+			</div> <!-- end basic operations -->
+
+			<div class="line"></div>
+
+			<div id="Quant_Dith">
+
+				<h3>Quantization and Dithering</h3>
+				<p>For all of the Quantization and Dithering methods the number of bits must be between 1 and 8.</p>
+				<div id="Quantize">
+					<h4>Image::Quantize</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -quantize [bits] < in.bmp > out.bmp</i>
+						</br>
+						For each color channel in the image I first convert the value to a floating point number <i>p</i> between 0 and 1, then use <i>q = floor(p * b)</i>, where <i>b = 2^bits</i>.  I then convert back to the 0-255 range using <i>color = floor(255*q/(b-1))</i>.</p>
+					<div class="row">		
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="q1">
+								<img id="q1" src="images/CSE190/Assignment1/Quantize/shed_quantize_1.jpg">
+								<p>nbits 1</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="q2">
+								<img id="q2" src="images/CSE190/Assignment1/Quantize/shed_quantize_2.jpg">
+								<p>nbits 2</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="q3">
+								<img id="q3" src="images/CSE190/Assignment1/Quantize/shed_quantize_4.jpg">
+								<p>nbits 4</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="q4">
+								<img id="q4" src="images/CSE190/Assignment1/Quantize/shed_quantize_6.jpg">
+								<p>nbits 6</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="q5">
+								<img id="q5" src="images/CSE190/Assignment1/Quantize/shed_quantize_8.jpg">
+								<p>nbits 8</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="RandomDither">
+					<h4>Image::RandomDither</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -randomDither [bits] < in.bmp > out.bmp</i>
+						</br>
+						I then added an option to add random noise to the quantizing function.  THe noise ranges from -0.5 to 0.5, and is added using <i>q = floor(p*b + noise)</i>.</p>
+					<div class="row">		
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="rdm1">
+								<img id="rdm1" src="images/CSE190/Assignment1/RandomDither/flower_RandomDither_1.jpg">
+								<p>nbits 1</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="rdm2">
+								<img id="rdm2" src="images/CSE190/Assignment1/RandomDither/flower_RandomDither_2.jpg">
+								<p>nbits 2</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="rdm3">
+								<img id="rdm3" src="images/CSE190/Assignment1/RandomDither/flower_RandomDither_4.jpg">
+								<p>nbits 4</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="rdm4">
+								<img id="rdm4" src="images/CSE190/Assignment1/RandomDither/flower_RandomDither_6.jpg">
+								<p>nbits 6</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="rdm5">
+								<img id="rdm5" src="images/CSE190/Assignment1/RandomDither/flower_RandomDither_8.jpg">
+								<p>nbits 8</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="FloydSteinbergDither">
+					<h4>Image::FloydSteinbergDither</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -FloydSteinbergDither [bits] < in.bmp > out.bmp</i>
+						</br>
+						In this algorithm the error made during quantizing is diffused to other pixels later on using the given weights:</p>
+					<p>Right = 7/16, bottomleft = 3/16, bottom = 5/16, bottomright = 1/16.</p>
+					<div class="row">		
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="fsd1">
+								<img id="fsd1" src="images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_1.jpg">
+								<p>nbits 1</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="fsd2">
+								<img id="fsd2" src="images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_2.jpg">
+								<p>nbits 2</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="fsd3">
+								<img id="fsd3" src="images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_4.jpg">
+								<p>nbits 4</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="fsd4">
+								<img id="fsd4" src="images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_6.jpg">
+								<p>nbits 6</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="fsd5">
+								<img id="fsd5" src="images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_8.jpg">
+								<p>nbits 8</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div> <!-- end Quantization and Dithering -->
+
+			<div class="line"></div>
+
+			<div id="Conv_Edge">
+				<h2>Basic Convolution and Edge Detection</h2>
+
+				<h3>Dealing with edges</h3>
+				<p>For all functions needing special cases for the edges, I initally used image wrapping.  I achieved this by using a helper function to calculate a modified index if necessary.</p>
+				<p>The helper function <strong>int wrapImg (int max, int idx)</strong> takes the maximum value an index can be and the current index, and returns a modified index if the current index is less than 0 or greater than or equal to the max.  As you can see with the wave image this may not be ideal, since the top of the image is very light and the bottom of the image is very dark. </p>
+				<p>To deal with this, I decided to use the reflection method instead.  The helper function <strong>int reflectImg (int max, int idx)</strong>, which reflects out of bounds points back into the image.</p>
+				<p>When I implemented edge detection, the helper function <strong>int reflectImg (int max, int idx)</strong>, created some errors on the border which I did not like.  To deal with this, I switched to a new helper function <strong>int validImg (int max, int idx)</strong> which instead only uses valid pixels in the image. </p>
+				<div class="row">
+					<div class="col-sm-2"></div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="blur1">
+								<img id="blur1" src="images/CSE190/Assignment1/Blur/wave_Blur_19.jpg">
+								<p>using the (reflectImg) method, with no dark spots</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="blur2">
+								<img id="blur2" src="images/CSE190/Assignment1/Blur/wave_Blur_19_wrap.jpg">
+								<p>19: using the (wrapImg) method, note the dark spots on top</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="edge1">
+								<img id="edge1" src="images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_reflect.jpg">
+								<p>edge detection: using reflect</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="edge2">
+								<img id="edge2" src="images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_valid.jpg">
+								<p>edge detection: using valid pixels only</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="Blur">
+					<h4>Image::Blur</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -blur [width] < in.bmp > out.bmp</i>
+						</br>
+						The blur kernel width parameter must be an odd integer.  A gaussian filter with the given width is used for discrete convolution with the image.  I set <i>sigma = floor(n/2.0)/2.0</i> as given in the assignment.</p>
+
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="blur3">
+								<img id="blur3" src="images/CSE190/Assignment1/Blur/wave_Blur_3.jpg">
+								<p>width 3</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="blur4">
+								<img id="blur4" src="images/CSE190/Assignment1/Blur/wave_Blur_5.jpg">
+								<p>width 5</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="blur5">
+								<img id="blur5" src="images/CSE190/Assignment1/Blur/wave_Blur_7.jpg">
+								<p>width 7</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="blur6">
+								<img id="blur6" src="images/CSE190/Assignment1/Blur/wave_Blur_11.jpg">
+								<p>width 11</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="blur7">
+								<img id="blur7" src="images/CSE190/Assignment1/Blur/wave_Blur_19.jpg">
+								<p>width 19</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="Sharpen">
+					<h4>Image::Sharpen</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -sharpen < in.bmp > out.bmp</i>
+						</br>
+						I used the filter provided in the assignment writeup.
+					</p>
+
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="srp1">
+								<img id="srp1" src="images/CSE190/Assignment1/Sharpen/sharpenFilter.jpg">
+								<p>filter provided for sharpening</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="srp2">
+								<img id="srp2" src="images/CSE190/Assignment1/Sharpen/flower.jpg">
+								<p>original flower image</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="srp3">
+								<img id="srp3" src="images/CSE190/Assignment1/Sharpen/flower_Sharpen.jpg">
+								<p>sharpened flower image</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="srp4">
+								<img id="srp4" src="images/CSE190/Assignment1/Sharpen/mandrill_Sharpen.jpg">
+								<p>sharpened mandrill image</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="srp5">
+								<img id="srp5" src="images/CSE190/Assignment1/Sharpen/wave_Sharpen.jpg">
+								<p>sharpened wave image</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="EdgeDetect">
+					<h4>Image::EdgeDetect</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -edgeDetect [threshold] < in.bmp > out.bmp</i>
+						</br>
+						Edge detection using sobel filters</p>
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="edge3">
+								<img id="edge3" src="images/CSE190/Assignment1/EdgeDetect/checkerboard_edge_0.jpg">
+								<p>threshold 0</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="edge4">
+								<img id="edge4" src="images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_valid.jpg">
+								<p>threshold 0</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="edge5">
+								<img id="edge5" src="images/CSE190/Assignment1/EdgeDetect/wave_edge_0.jpg">
+								<p>threshold 0</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="edge6">
+								<img id="edge6" src="images/CSE190/Assignment1/EdgeDetect/wave_edge_100.jpg">
+								<p>threshold 100</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="edge7">
+								<img id="edge7" src="images/CSE190/Assignment1/EdgeDetect/wave_edge_200.jpg">
+								<p>threshold 200</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div> <!-- end Convolution and Edge Detection -->
+
+			<div id="scaleShift">
+				<h3>Antialiased Scale and Shift</h3>
+
+				<div id="Scale">
+					<h4>Image::Scale</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -sampling [type] -size [w] [h] < in.bmp > out.bmp</i>
+						</br>
+						Nearest Neighbor:</p>
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="scp1">
+								<img id="scp1" src="images/CSE190/Assignment1/Scale/point/original.jpg">
+								<p>original image</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="scp2">
+								<img id="scp2" src="images/CSE190/Assignment1/Scale/point/300_300.jpg">
+								<p>300 x 300</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="scp3">
+								<img id="scp3" src="images/CSE190/Assignment1/Scale/point/300_512.jpg">
+								<p>300 x 512</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="scp4">
+								<img id="scp4" src="images/CSE190/Assignment1/Scale/point/512_300.jpg">
+								<p>512 x 300</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="scp5">
+								<img id="scp5" src="images/CSE190/Assignment1/Scale/point/800_800.jpg">
+								<p>800 x 800</p>
+							</a>
+						</div>
+					</div>
+					<p>Hat Filter: f(x) = 1 - |x|</p>
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="sch1">
+								<img id="sch1" src="images/CSE190/Assignment1/Scale/hat/original.jpg">
+								<p>original image</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="sch2">
+								<img id="sch2" src="images/CSE190/Assignment1/Scale/hat/300_300.jpg">
+								<p>300 x 300</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="sch3">
+								<img id="sch3" src="images/CSE190/Assignment1/Scale/hat/300_512.jpg">
+								<p>300 x 512</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="sch4">
+								<img id="sch4" src="images/CSE190/Assignment1/Scale/hat/512_300.jpg">
+								<p>512 x 300</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="sch5">
+								<img id="sch5" src="images/CSE190/Assignment1/Scale/hat/800_800.jpg">
+								<p>800 x 800</p>
+							</a>
+						</div>
+					</div>
+					<p>Mitchell Filter:</p>
+					<p>f(0 <= |x| < 1) = (1/6)*(7|x|^3 - 12|x|^2 + 6/3)</p>
+					<p>f(1 <= |x| < 2) = (1/6)*((-7/3)|x|^3 + 12|x|^2 - 20|x| + 32/3)</p>
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="scm1">
+								<img id="scm1" src="images/CSE190/Assignment1/Scale/mitchell/original.jpg">
+								<p>original image</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="scm2">
+								<img id="scm2" src="images/CSE190/Assignment1/Scale/mitchell/300_300.jpg">
+								<p>300 x 300</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="scm3">
+								<img id="scm3" src="images/CSE190/Assignment1/Scale/mitchell/300_512.jpg">
+								<p>300 x 512</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="scm4">
+								<img id="scm4" src="images/CSE190/Assignment1/Scale/mitchell/512_300.jpg">
+								<p>512 x 300</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="scm5">
+								<img id="scm5" src="images/CSE190/Assignment1/Scale/mitchell/800_800.jpg">
+								<p>800 x 800</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="Shift">
+					<h4>Image::Shift</h4>
+					<p>
+						<i>command line arguments: </br>
+						./image -shift [sx] [sy] < in.bmp >out.bmp</i>
+						</br>
+						Nearest Neighbor:</p>
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shp1">
+								<img id="shp1" src="images/CSE190/Assignment1/Shift/point/1_1.jpg">
+								<p>1 x 1</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shp2">
+								<img id="shp2" src="images/CSE190/Assignment1/Shift/point/12_12.jpg">
+								<p>1.2 x 1/2</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shp3">
+								<img id="shp3" src="images/CSE190/Assignment1/Shift/point/15_15.jpg">
+								<p>1.5 x 1.5</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shp4">
+								<img id="shp4" src="images/CSE190/Assignment1/Shift/point/17_17.jpg">
+								<p>1.7 x 1.7</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shp5">
+								<img id="shp5" src="images/CSE190/Assignment1/Shift/point/13_28.jpg">
+								<p>1.3 x 2.8</p>
+							</a>
+						</div>
+					</div>
+					<p>Hat Filter: f(x) = 1 - |x|</p>
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shh1">
+								<img id="shh1" src="images/CSE190/Assignment1/Shift/hat/1_1.jpg">
+								<p>1 x 1</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shh2">
+								<img id="shh2" src="images/CSE190/Assignment1/Shift/hat/12_12.jpg">
+								<p>1.2 x 1/2</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shh3">
+								<img id="shh3" src="images/CSE190/Assignment1/Shift/hat/15_15.jpg">
+								<p>1.5 x 1.5</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shh4">
+								<img id="shh4" src="images/CSE190/Assignment1/Shift/hat/17_17.jpg">
+								<p>1.7 x 1.7</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shh5">
+								<img id="shh5" src="images/CSE190/Assignment1/Shift/hat/13_28.jpg">
+								<p>1.3 x 2.8</p>
+							</a>
+						</div>
+					</div>
+					<p>Mitchell Filter:</p>
+					<p>f(0 <= |x| < 1) = (1/6)*(7|x|^3 - 12|x|^2 + 6/3)</p>
+					<p>f(1 <= |x| < 2) = (1/6)*((-7/3)|x|^3 + 12|x|^2 - 20|x| + 32/3)</p>
+					<div class="row">
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shm1">
+								<img id="shm1" src="images/CSE190/Assignment1/Shift/mitchell/1_1.jpg">
+								<p>1 x 1</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shm2">
+								<img id="shm2" src="images/CSE190/Assignment1/Shift/mitchell/12_12.jpg">
+								<p>1.2 x 1/2</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shm3">
+								<img id="shm3" src="images/CSE190/Assignment1/Shift/mitchell/15_15.jpg">
+								<p>1.5 x 1.5</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shm4">
+								<img id="shm4" src="images/CSE190/Assignment1/Shift/mitchell/17_17.jpg">
+								<p>1.7 x 1.7</p>
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="shm5">
+								<img id="shm5" src="images/CSE190/Assignment1/Shift/mitchell/13_28.jpg">
+								<p>1.3 x 2.8</p>
+							</a>
+						</div>
+					</div>
+				</div>				
+
+			</div>  <!-- end Antialiased Scale and Shift -->
+
+			<div>
+				<h3>Fun nonlinear filters</h3>
+				<p>
+					<i>command line arguments: </br>
+					./image -fun < in.bmp >out.bmp</i>
+					</br>
+					I decided to implement a swirl effect. I use the mitchell filter for anti-aliasing.  I searched for math equations for the swirl effect online and found several different ones.  All of these left black pixels where there were no image pixels to sample, but I instead used my sampling method which uses the wrapping method.  The function I chose to use to transform the pixels is <strong>newX = x*cos(angle) - y*sin(angle) +xcenter</strong> and <strong>newY = x*sin(angle) + y*cos(angle) + ycenter</strong> and <strong>r = (x*x + y*y)</strong> where angle is a function of r.
+				</p>
+
+				<div class="row">
+					<div class="col-sm-2">
+						<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="fun1">
+							<img id="fun1" src="images/CSE190/Assignment1/Fun/checkerboard2_fun.jpg">
+						</a>
+					</div>
+					<div class="col-sm-2">
+						<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="fun2">
+							<img id="fun2" src="images/CSE190/Assignment1/Fun/wave_fun.jpg">
+						</a>
+					</div>
+					<div class="col-sm-2">
+						<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="fun3">
+							<img id="fun3" src="images/CSE190/Assignment1/Fun/shed_fun.jpg">
+						</a>
+					</div>
+					<div class="col-sm-2">
+						<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="fun4">
+							<img id="fun4" src="images/CSE190/Assignment1/Fun/mandrill_fun.jpg">
+						</a>
+					</div>
+					<div class="col-sm-2">
+						<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)" data-imgSrc="fun5">
+							<img id="fun5" src="images/CSE190/Assignment1/Fun/flower_fun.jpg">
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<p><a href="#topofpage">Back to top of page</a> 
+			</div>
+		</div>
+
+		</div>
+
+	</body>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+
+	<!-- Latest compiled and minified JavaScript Bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!--custom js files -->
+	<script src="js/portfolio.js"></script>
+</html>

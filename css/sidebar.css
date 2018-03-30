@@ -2,7 +2,7 @@
 	NAVBAR STYLE SMALL SCREEN
 ----------------------------------------------------- */
 .navbar-custom {
-	background: #53619b;
+	background: #7386D5;
 	color: #fff;
 	/*display: none;*/
 }
@@ -33,6 +33,10 @@
 
 #navbar .sidebar-header {
 	padding: 20px;
+	background: #53619b;
+}
+
+#topHeader {
 	background: #53619b;
 }
 
@@ -84,21 +88,26 @@ a[aria-expanded="true"]::before {
 }
 
 
-ul ul a {
-	font-size: 0.9em !important;
-	padding-left: 30px !important;
-}
-
 ul.CTAs {
-	padding: 20px;
+    padding: 20px;
 }
 
 ul.CTAs a {
-	text-align: center;
-	font-size: 0.9em !important;
-	display: block;
-	border-radius: 5px;
-	margin-bottom: 5px;
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.mainPage {
+    background: #697ac6 !important;
+    color: #fff !important;
+}
+
+a.mainPage:hover {
+	color: #7386D5 !important;
+	background: #fff !important;
 }
 
 /* ---------------------------------------------------
