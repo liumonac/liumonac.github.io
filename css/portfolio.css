@@ -52,9 +52,27 @@ a, a:hover, a:focus {
     max-height: 600px;
 }
 
-.video {
-    max-width: 400px;
-    height: auto;
+.mediaSpacing {
+    padding-bottom: 10px;
+}
+
+.responsiveVideo {
+    position:relative;
+    height:0;
+    max-height: 315px;
+    max-width: 560px !important;
+    padding-bottom:56.25%;
+    overflow:hidden;
+}
+
+.responsiveVideo iframe, .video-container object, .video-container embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100% !important;
+    height:100% !important;
+    max-height: 315px;
+    max-width: 560px !important;
 }
 
 

@@ -18,6 +18,7 @@ function initializePage() {
 	//Change active list item
 	$(".menuOption").click(activateMenuItem);
 	$(".subOption").click(activateSubItem);
+	$("#subMenuToggle").click(subMenuClick);
 
 	$(".btn").click(removeFocus);
 }
@@ -27,6 +28,7 @@ function initializePage() {
 ----------------------------------------------------- */
 
 var subOptionclicked = false;
+var subMenuClicked = false;
 
 //Change active list item
 function activateMenuItem () {
@@ -40,6 +42,11 @@ function activateMenuItem () {
 	if (!subOptionclicked) {
 		$(".subOption").removeClass("active");
 	}
+
+	if (!subMenuClicked && $('#navbar').hasClass("navbar-fixed-top")) {
+		$("#menucollapse").click();
+	}
+	subMenuClicked = false;
 	subOptionclicked = false;
 }
 
@@ -53,6 +60,11 @@ function activateSubItem () {
 	}
 	subOptionclicked = true;
 }
+
+function subMenuClick () {
+	subMenuClicked = true;
+}
+
 
 function removeFocus() {
 	$(this).blur();
@@ -76,7 +88,11 @@ function checkSize() {
 		$('#optionsListType').addClass('list-unstyled components');
 	}
 
-	console.log($("#navbar").parent().html());
+	$( ".responsiveVideo" ).each(function( index ) {
+		var w = $( this ).width();
+		w = w * 0.5625;
+		$( this ).css ("padding-bottom", w);
+	});
 }
 
 // Add smooth scrolling animation

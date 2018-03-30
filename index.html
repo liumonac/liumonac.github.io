@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<title>Monica Liu</title>
 
@@ -27,7 +26,7 @@
 			</div>
 
 			<div id="topHeader" class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#optionsList" aria-expanded="false" aria-controls="navbar">
+				<button id="menucollapse" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#optionsList" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -50,8 +49,8 @@
 					</li>
 				-->
 					<li class="menuOption">
-						<a href="#projects" data-toggle="collapse" data-target="#pageSubmenu" aria-expanded="false">Projects</a>
-						<ul id="pageSubmenu" class="collapse list-unstyled components">
+						<a id="subMenuToggle" href="#projects" data-toggle="collapse" data-target="#projSubMenu" aria-expanded="false">Projects</a>
+						<ul id="projSubMenu" class="collapse list-unstyled components">
 							<li class="subOption"><a href="#acg">Advanced Computer Graphics</a></li>
 							<li class="subOption"><a href="#bb">Battle Blocks</a></li>
 							<li class="subOption"><a href="#animation">Computer Animation</a></li>
@@ -103,86 +102,92 @@
 					Class: CSE 190: Advanced Computer Graphics<br>
 					Date: Spring 2015
 				</p>
-				<a class="btn btn-primary" href="downloads/CSE190_1.zip" role="button">Project 1 Download for MacOS</a>
-				<a class="btn btn-primary" href="assignment1.html" role="button">Project 1 Report</a>
-				<a class="btn btn-primary" href="http://cseweb.ucsd.edu/~ravir/190/2015/assignment1.pdf" role="button" target="_blank">Assignment 1 Prompt</a>
-				<p><br></p>
-				<div id="acgSlides" class="carousel limitSize slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#acgSlides" data-slide-to="0"></li>
-						<li data-target="#acgSlides" data-slide-to="1"></li>
-						<li data-target="#acgSlides" data-slide-to="2"></li>
-						<li data-target="#acgSlides" data-slide-to="3"></li>
-						<li data-target="#acgSlides" data-slide-to="4" class="active"></li>
-						<li data-target="#acgSlides" data-slide-to="5"></li>
-					</ol>
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item">
-							<img src="images/CSE190/Assignment2/test.jpg" alt="test.jpg">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 2: Mesh Decimation</h3>
-								<p>Quadratic Simplification</p>
+				<div class="mediaSpacing">
+					<a class="btn btn-primary" href="downloads/CSE190_1.zip" role="button">Project 1 Download for MacOS</a>
+					<a class="btn btn-primary" href="CSE190/assignment1.html" role="button">Project 1 Report</a>
+					<a class="btn btn-primary" href="http://cseweb.ucsd.edu/~ravir/190/2015/assignment1.pdf" role="button" target="_blank">Assignment 1 Prompt</a>
+				</div>
+				<div class="mediaSpacing">
+					<div id="acgSlides" class="carousel limitSize slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#acgSlides" data-slide-to="0"></li>
+							<li data-target="#acgSlides" data-slide-to="1"></li>
+							<li data-target="#acgSlides" data-slide-to="2"></li>
+							<li data-target="#acgSlides" data-slide-to="3"></li>
+							<li data-target="#acgSlides" data-slide-to="4" class="active"></li>
+							<li data-target="#acgSlides" data-slide-to="5"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item">
+								<img src="images/CSE190/Assignment2/test.jpg" alt="test.jpg">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 2: Mesh Decimation</h3>
+									<p>Quadratic Simplification</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/CSE190/Assignment2/test1.jpg" alt="test1.jpg">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 2: Mesh Decimation</h3>
+									<p>Quadratic Simplification</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/CSE190/Assignment2/plane1.jpg" alt="plane1.jpg">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 2: Mesh Decimation</h3>
+									<p>Quadratic Simplification</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/CSE190/Assignment2/plane2.jpg" alt="plane2.jpg">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 2: Mesh Decimation</h3>
+									<p>Quadratic Simplification</p>
+								</div>
+							</div>
+							<div class="item active">
+								<img src="images/CSE190/Assignment2/teapotfull.jpg" alt="teapotfull.jpg">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 2: Mesh Decimation</h3>
+									<p>Full Poly Mesh</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/CSE190/Assignment2/teapotp.jpg" alt="teapotp.jpg">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 2: Mesh Decimation</h3>
+									<p>Quadratic Simplification</p>
+								</div>
 							</div>
 						</div>
-						<div class="item">
-							<img src="images/CSE190/Assignment2/test1.jpg" alt="test1.jpg">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 2: Mesh Decimation</h3>
-								<p>Quadratic Simplification</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="images/CSE190/Assignment2/plane1.jpg" alt="plane1.jpg">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 2: Mesh Decimation</h3>
-								<p>Quadratic Simplification</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="images/CSE190/Assignment2/plane2.jpg" alt="plane2.jpg">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 2: Mesh Decimation</h3>
-								<p>Quadratic Simplification</p>
-							</div>
-						</div>
-						<div class="item active">
-							<img src="images/CSE190/Assignment2/teapotfull.jpg" alt="teapotfull.jpg">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 2: Mesh Decimation</h3>
-								<p>Full Poly Mesh</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="images/CSE190/Assignment2/teapotp.jpg" alt="teapotp.jpg">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 2: Mesh Decimation</h3>
-								<p>Quadratic Simplification</p>
-							</div>
-						</div>
-					</div>
 
-					<!-- Left and right controls -->
-					<a class="left carousel-control" href="#acgSlides" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#acgSlides" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-						<span class="sr-only">Next</span>
-					</a>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#acgSlides" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#acgSlides" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
 				</div>
-				<p><br></p>
-				<div id="CSE190Project2">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/KMyx-bjkRng" frameborder="0" allowfullscreen></iframe>
+				<div class="mediaSpacing">
+					<div class="responsiveVideo">
+						<iframe src="https://www.youtube.com/embed/KMyx-bjkRng" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div>
-				<p><br></p>
-				<a class="btn btn-primary" href="https://cse190ennuma.weebly.com/project-2.html" role="button" target="_blank">Project 2 Report</a>
-				<a class="btn btn-primary" href="http://cseweb.ucsd.edu/~ravir/190/2015/assignment2.pdf" role="button" target="_blank">Assignment 2 Prompt</a>
-				<p><br></p>
-				<div id="CSE190finalProject">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/pQwTca8NIp8" frameborder="0" allowfullscreen></iframe>
+				<div class="mediaSpacing">
+					<a class="btn btn-primary" href="https://cse190ennuma.weebly.com/project-2.html" role="button" target="_blank">Project 2 Report</a>
+					<a class="btn btn-primary" href="http://cseweb.ucsd.edu/~ravir/190/2015/assignment2.pdf" role="button" target="_blank">Assignment 2 Prompt</a>
+				</div>
+				<div class="mediaSpacing">
+					<div class="responsiveVideo">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/pQwTca8NIp8" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div>
 				<a class="btn btn-primary" href="downloads/CSE190_final.zip" role="button">Final Project Download for MacOS</a>
 				<a class="btn btn-primary" href="https://cse190ennuma.weebly.com/final-project.html" role="button" target="_blank">Final Project Report</a>
@@ -200,64 +205,59 @@
 					Class: CSE 125 - Software System Design and Implementation<br>
 					Date: Winter 2015
 				</p>
+				<div class="mediaSpacing">
+					<div id="bbSlides" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#bbSlides" data-slide-to="0" class="active"></li>
+							<li data-target="#bbSlides" data-slide-to="1"></li>
+							<li data-target="#bbSlides" data-slide-to="2"></li>
+							<li data-target="#bbSlides" data-slide-to="3"></li>
+							<li data-target="#bbSlides" data-slide-to="4"></li>
+							<li data-target="#bbSlides" data-slide-to="5"></li>
+							<li data-target="#bbSlides" data-slide-to="6"></li>
+							<li data-target="#bbSlides" data-slide-to="7"></li>
+						</ol>
 
-				<div id="bbSlides" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#bbSlides" data-slide-to="0" class="active"></li>
-						<li data-target="#bbSlides" data-slide-to="1"></li>
-						<li data-target="#bbSlides" data-slide-to="2"></li>
-						<li data-target="#bbSlides" data-slide-to="3"></li>
-						<li data-target="#bbSlides" data-slide-to="4"></li>
-						<li data-target="#bbSlides" data-slide-to="5"></li>
-						<li data-target="#bbSlides" data-slide-to="6"></li>
-						<li data-target="#bbSlides" data-slide-to="7"></li>
-					</ol>
-
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item active">
-							<img src="images/CSE125/mainmenu.jpg" alt="mainmenu.jpg">
-						</div>
-						<div class="item">
-							<img src="images/CSE125/help.jpg" alt="help.jpg">
-						</div>
-
-						<div class="item">
-							<img src="images/CSE125/buildmode.jpg" alt="buildmode.jpg">
-						</div>
-						<div class="item">
-							<img src="images/CSE125/1.jpg" alt="1.jpg">
-						</div>
-
-						<div class="item">
-							<img src="images/CSE125/2.jpg" alt="2.jpg">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="images/CSE125/mainmenu.jpg" alt="mainmenu.jpg">
+							</div>
+							<div class="item">
+								<img src="images/CSE125/help.jpg" alt="help.jpg">
+							</div>
+							<div class="item">
+								<img src="images/CSE125/buildmode.jpg" alt="buildmode.jpg">
+							</div>
+							<div class="item">
+								<img src="images/CSE125/1.jpg" alt="1.jpg">
+							</div>
+							<div class="item">
+								<img src="images/CSE125/2.jpg" alt="2.jpg">
+							</div>
+							<div class="item">
+								<img src="images/CSE125/3.jpg" alt="3.jpg">
+							</div>
+							<div class="item">
+								<img src="images/CSE125/4.jpg" alt="4.jpg">
+							</div>
+							<div class="item">
+								<img src="images/CSE125/5.jpg" alt="5.jpg">
+							</div>
 						</div>
 
-						<div class="item">
-							<img src="images/CSE125/3.jpg" alt="3.jpg">
-						</div>
-
-						<div class="item">
-							<img src="images/CSE125/4.jpg" alt="4.jpg">
-						</div>
-
-						<div class="item">
-							<img src="images/CSE125/5.jpg" alt="5.jpg">
-						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#bbSlides" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#bbSlides" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
 					</div>
-
-					<!-- Left and right controls -->
-					<a class="left carousel-control" href="#bbSlides" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#bbSlides" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-						<span class="sr-only">Next</span>
-					</a>
 				</div>
-				<p><br></p>
 				<a class="btn btn-primary" href="https://www.youtube.com/watch?v=y--bGuVPwS8#t=1231s" role="button" target="_blank">Project Demo</a>
 				<a class="btn btn-primary" href="https://cse125.ucsd.edu/2015/cse125g1/" role="button" target="_blank">Project Website</a>
 				<a class="btn btn-primary" href="https://cse125.ucsd.edu/" role="button" target="_blank">Class Website</a>
@@ -274,117 +274,113 @@
 					<li>C/C++</li>
 				</ul>
 				<p>CSE169 - Computer Animation</p>
-				<div id="animationSlides" class="carousel limitSize slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#animationSlides" data-slide-to="0"></li>
-						<li data-target="#animationSlides" data-slide-to="1"></li>
-						<li data-target="#animationSlides" data-slide-to="2"></li>
-						<li data-target="#animationSlides" data-slide-to="3"></li>
-						<li data-target="#animationSlides" data-slide-to="4"></li>
-						<li data-target="#animationSlides" data-slide-to="5"></li>
-						<li data-target="#animationSlides" data-slide-to="6"></li>
-						<li data-target="#animationSlides" data-slide-to="7"></li>
-						<li data-target="#animationSlides" data-slide-to="9" class="active"></li>
-						<li data-target="#animationSlides" data-slide-to="10"></li>
-					</ol>
+				<div class="mediaSpacing">
+					<div id="animationSlides" class="carousel limitSize slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#animationSlides" data-slide-to="0"></li>
+							<li data-target="#animationSlides" data-slide-to="1"></li>
+							<li data-target="#animationSlides" data-slide-to="2"></li>
+							<li data-target="#animationSlides" data-slide-to="3"></li>
+							<li data-target="#animationSlides" data-slide-to="4"></li>
+							<li data-target="#animationSlides" data-slide-to="5"></li>
+							<li data-target="#animationSlides" data-slide-to="6"></li>
+							<li data-target="#animationSlides" data-slide-to="7"></li>
+							<li data-target="#animationSlides" data-slide-to="9" class="active"></li>
+							<li data-target="#animationSlides" data-slide-to="10"></li>
+						</ol>
 
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item">
-							<img src="images/CSE169/project1wire.png" alt="project1wire.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 1: Skeleton</h3>
-								<p>Render the scene from a provided .skel file</p>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item">
+								<img src="images/CSE169/project1wire.png" alt="project1wire.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 1: Skeleton</h3>
+									<p>Render the scene from a provided .skel file</p>
+								</div>
 							</div>
-						</div>
-						<div class="item">
-							<img src="images/CSE169/project1solid.png" alt="project1solid.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 1: Skeleton</h3>
-								<p>Render the scene from a provided .skel file</p>
+							<div class="item">
+								<img src="images/CSE169/project1solid.png" alt="project1solid.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 1: Skeleton</h3>
+									<p>Render the scene from a provided .skel file</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/CSE169/project1extra.png" alt="project1extra.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 1: Skeleton</h3>
+									<p>Extra Credit: Create a custom .skel file</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/CSE169/project2.png" alt="project2.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 2: Skinning</h3>
+									<p>Load a character skin from a .skin file and bind it to a matching .skel file using the smooth skinning algorithm. This program allows you to adjust the skinned character using the same adjustments as the skeleton project. </p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/CSE169/project2_extra0.png" alt="project2_extra0.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 2: Skinning</h3>
+									<p>Extra Credit: Texture mapping</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/CSE169/project2_extra1.png" alt="project2_extra1.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 2: Skinning</h3>
+									<p>Extra Credit: Morphing (cheek)</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/CSE169/project2_extra2.png" alt="project2_extra2.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 2: Skinning</h3>
+									<p>Extra Credit: Morphing (Eyebrow)</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/CSE169/project3_1.png" alt="project3_1.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 3: Keyframe Animation</h3>
+									<p>Animate a character skeleton using a .anim file.each joint.  anim file specifies the channels which correspond with a joint in the skeleton and its keyframes. In addition, this app displays the channels for each joint</p>
+								</div>
+							</div>
+							<div class="item active">
+								<img src="images/CSE169/finalProjectSolid.png" alt="finalProjectSolid.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 4: Cloth Simulation</h3>
+									<p>Physics based cloth simulation using the Springs and Particles model. Has collision detection and wind simulation.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/CSE169/finalProjectWire.png" alt="finalProjectWire.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 4: Cloth Simulation</h3>
+									<p>This app allows you the move the cloth around and adjust the wind speed.</p>
+								</div>
 							</div>
 						</div>
 
-						<div class="item">
-							<img src="images/CSE169/project1extra.png" alt="project1extra.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 1: Skeleton</h3>
-								<p>Extra Credit: Create a custom .skel file</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="images/CSE169/project2.png" alt="project2.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 2: Skinning</h3>
-								<p>Load a character skin from a .skin file and bind it to a matching .skel file using the smooth skinning algorithm. This program allows you to adjust the skinned character using the same adjustments as the skeleton project. </p>
-							</div>
-						</div>
-
-						<div class="item">
-							<img src="images/CSE169/project2_extra0.png" alt="project2_extra0.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 2: Skinning</h3>
-								<p>Extra Credit: Texture mapping</p>
-							</div>
-						</div>
-
-						<div class="item">
-							<img src="images/CSE169/project2_extra1.png" alt="project2_extra1.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 2: Skinning</h3>
-								<p>Extra Credit: Morphing (cheek)</p>
-							</div>
-						</div>
-
-						<div class="item">
-							<img src="images/CSE169/project2_extra2.png" alt="project2_extra2.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 2: Skinning</h3>
-								<p>Extra Credit: Morphing (Eyebrow)</p>
-							</div>
-						</div>
-
-						<div class="item">
-							<img src="images/CSE169/project3_1.png" alt="project3_1.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 3: Keyframe Animation</h3>
-								<p>Animate a character skeleton using a .anim file.each joint.  anim file specifies the channels which correspond with a joint in the skeleton and its keyframes. In addition, this app displays the channels for each joint</p>
-							</div>
-						</div>
-
-						<div class="item active">
-							<img src="images/CSE169/finalProjectSolid.png" alt="finalProjectSolid.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 4: Cloth Simulation</h3>
-								<p>Physics based cloth simulation using the Springs and Particles model. Has collision detection and wind simulation.</p>
-							</div>
-						</div>
-
-						<div class="item">
-							<img src="images/CSE169/finalProjectWire.png" alt="finalProjectWire.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 4: Cloth Simulation</h3>
-								<p>This app allows you the move the cloth around and adjust the wind speed.</p>
-							</div>
-						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#animationSlides" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#animationSlides" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
 					</div>
-
-					<!-- Left and right controls -->
-					<a class="left carousel-control" href="#animationSlides" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#animationSlides" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-						<span class="sr-only">Next</span>
-					</a>
 				</div>
-				<p><br></p>
-				<div id="CSE190Project2">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/taWsCTBPYhU" frameborder="0" allowfullscreen></iframe>
+				<div class="mediaSpacing">
+					<div class="responsiveVideo">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/taWsCTBPYhU" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div>
-				<p><br></p>
 				<a class="btn btn-primary" href="downloads/animator_win.zip" role="button">Download for Windows</a>
 				<a class="btn btn-primary" href="downloads/animator_mac.zip" role="button">Download for MacOS</a>
 				<a class="btn btn-primary" href="downloads/animator_linux.zip" role="button">Download for Linux</a>
@@ -406,56 +402,55 @@
 					Class: CSE170 - Human-Computer Interaction <br>
 					Date: Winter 2015
 				</p>
-				<div id="faSlides" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#faSlides" data-slide-to="0"></li>
-						<li data-target="#faSlides" data-slide-to="1"></li>
-						<li data-target="#faSlides" data-slide-to="2"></li>
-						<li data-target="#faSlides" data-slide-to="3" class="active"></li>
-					</ol>
+				<div class="mediaSpacing">
+					<div id="faSlides" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#faSlides" data-slide-to="0"></li>
+							<li data-target="#faSlides" data-slide-to="1"></li>
+							<li data-target="#faSlides" data-slide-to="2"></li>
+							<li data-target="#faSlides" data-slide-to="3" class="active"></li>
+						</ol>
 
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item">
-							<img src="images/CSE170/storyboard1.jpg" alt="storyboard1.jpg">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>StoryBoard and Prototyping</h3>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item">
+								<img src="images/CSE170/storyboard1.jpg" alt="storyboard1.jpg">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>StoryBoard and Prototyping</h3>
+								</div>
 							</div>
-						</div>
-						<div class="item">
-							<img src="images/CSE170/development1.jpg" alt="development1.jpg">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Product Development</h3>
+							<div class="item">
+								<img src="images/CSE170/development1.jpg" alt="development1.jpg">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Product Development</h3>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/CSE170/advert3.jpg" alt="advert3.jpg">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Advertising</h3>
+								</div>
+							</div>
+							<div class="item active">
+								<img src="images/CSE170/advert2.jpg" alt="advert2.jpg">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Advertising</h3>
+								</div>
 							</div>
 						</div>
 
-						<div class="item">
-							<img src="images/CSE170/advert3.jpg" alt="advert3.jpg">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Advertising</h3>
-							</div>
-						</div>
-
-						<div class="item active">
-							<img src="images/CSE170/advert2.jpg" alt="advert2.jpg">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Advertising</h3>
-							</div>
-						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#faSlides" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#faSlides" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
 					</div>
-
-					<!-- Left and right controls -->
-					<a class="left carousel-control" href="#faSlides" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#faSlides" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-						<span class="sr-only">Next</span>
-					</a>
 				</div>
-				<p><br></p>
 				<a class="btn btn-primary" href="http://feelzapp.herokuapp.com/" role="button" target="_blank">Project Demo</a>
 				<a class="btn btn-primary" href="http://d.ucsd.edu/class/intro-hci/2015/index.html" role="button" target="_blank">Class Website</a>
 
@@ -466,99 +461,99 @@
 				</ul>
 				<p>
 					A series of projects on basic rendering algorithms building up to a ray tracing program. Topics include sampling, filtering, global illumination, texture mapping, and basic shading models. <br>
-					Class: CSE168 Projects - Photo-Realistic Rendering Algorithms <br>
+					Class: CSE168 - Photo-Realistic Rendering Algorithms <br>
 					Date: Spring 2014
 				</p>
-				<div id="renderSlides" class="carousel limitSize slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#renderSlides" data-slide-to="0"></li>
-						<li data-target="#renderSlides" data-slide-to="1"></li>
-						<li data-target="#renderSlides" data-slide-to="2"></li>
-						<li data-target="#renderSlides" data-slide-to="3"></li>
-						<li data-target="#renderSlides" data-slide-to="4"></li>
-						<li data-target="#renderSlides" data-slide-to="5"></li>
-						<li data-target="#renderSlides" data-slide-to="6"></li>
-						<li data-target="#renderSlides" data-slide-to="7" class="active"></li>
-					</ol>
+				<div class="mediaSpacing">
+					<div id="renderSlides" class="carousel limitSize slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#renderSlides" data-slide-to="0"></li>
+							<li data-target="#renderSlides" data-slide-to="1"></li>
+							<li data-target="#renderSlides" data-slide-to="2"></li>
+							<li data-target="#renderSlides" data-slide-to="3"></li>
+							<li data-target="#renderSlides" data-slide-to="4"></li>
+							<li data-target="#renderSlides" data-slide-to="5"></li>
+							<li data-target="#renderSlides" data-slide-to="6"></li>
+							<li data-target="#renderSlides" data-slide-to="7" class="active"></li>
+						</ol>
 
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item">
-							<img src="images/CSE168/project1.png" alt="project1.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 1: Basic Ray Tracer</h3>
-								<p>Create simple rectangle and plane objects</p>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item">
+								<img src="images/CSE168/project1.png" alt="project1.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 1: Basic Ray Tracer</h3>
+									<p>Create simple rectangle and plane objects</p>
+								</div>
 							</div>
-						</div>
-						<div class="item">
-							<img src="images/CSE168/project1_extra.png" alt="project1_extra.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 1</h3>
-								<p>Extra Credit: Add spheres and cast shadows</p>
+							<div class="item">
+								<img src="images/CSE168/project1_extra.png" alt="project1_extra.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 1</h3>
+									<p>Extra Credit: Add spheres and cast shadows</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/CSE168/project2.png" alt="project2.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 2: Spatial Data Structures</h3>
+									<p>Complex scene using AABB box tree</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/CSE168/project3.png" alt="project3.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 3: Materials and Textures</h3>
+									<p>Lambert and Ashikhmin models using sampling routines and BRDF sampling for reflection rays (render time: 3min)</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/CSE168/project3_extra1.png" alt="project3_extra1.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 3: Materials and Textures</h3>
+									<p>Extra Credit: Add aperture</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/CSE168/project3_extra2.png" alt="project3_extra2.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 3: Materials and Textures</h3>
+									<p>Extra Credit: Add motion blur (render time: 4min 20s)</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/CSE168/project4.png" alt="project4.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 4: Procedural Textures</h3>
+									<p>Beer Lambert Law</p>
+								</div>
+							</div>
+
+							<div class="item active">
+								<img src="images/CSE168/project4_final.png" alt="project4_final.png">
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Project 4: Procedural Textures</h3>
+									<p>Perlin and Worley Noise Textures (render time: 35min)</p>
+								</div>
 							</div>
 						</div>
 
-						<div class="item">
-							<img src="images/CSE168/project2.png" alt="project2.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 2: Spatial Data Structures</h3>
-								<p>Complex scene using AABB box tree</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="images/CSE168/project3.png" alt="project3.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 3: Materials and Textures</h3>
-								<p>Lambert and Ashikhmin models using sampling routines and BRDF sampling for reflection rays (render time: 3min)</p>
-							</div>
-						</div>
-
-						<div class="item">
-							<img src="images/CSE168/project3_extra1.png" alt="project3_extra1.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 3: Materials and Textures</h3>
-								<p>Extra Credit: Add aperture</p>
-							</div>
-						</div>
-
-						<div class="item">
-							<img src="images/CSE168/project3_extra2.png" alt="project3_extra2.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 3: Materials and Textures</h3>
-								<p>Extra Credit: Add motion blur (render time: 4min 20s)</p>
-							</div>
-						</div>
-
-						<div class="item">
-							<img src="images/CSE168/project4.png" alt="project4.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 4: Procedural Textures</h3>
-								<p>Beer Lambert Law</p>
-							</div>
-						</div>
-
-						<div class="item active">
-							<img src="images/CSE168/project4_final.png" alt="project4_final.png">
-							<div class="carousel-caption d-none d-md-block">
-								<h3>Project 4: Procedural Textures</h3>
-								<p>Perlin and Worley Noise Textures (render time: 35min)</p>
-							</div>
-						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#renderSlides" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#renderSlides" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
 					</div>
-
-					<!-- Left and right controls -->
-					<a class="left carousel-control" href="#renderSlides" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#renderSlides" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-						<span class="sr-only">Next</span>
-					</a>
 				</div>
-				<p><br></p>
-
 				<a class="btn btn-primary" href="downloads/CSE168_win.zip" role="button">Download for Windows</a>
 				<a class="btn btn-primary" href="downloads/CSE168_mac.zip" role="button">Download for MacOS</a>
 				<a class="btn btn-primary" href="downloads/CSE168_linux.zip" role="button">Download for Linux</a>
@@ -576,35 +571,36 @@
 					Class: CSE167 - Introduction to Computer Graphics <br>
 					Date: Fall 2013
 				</p>
-				<div id="kmSlides" class="carousel limitSize slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#kmSlides" data-slide-to="0" class="active"></li>
-						<li data-target="#kmSlides" data-slide-to="1"></li>
-					</ol>
+				<div class="mediaSpacing">
+					<div id="kmSlides" class="carousel limitSize slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#kmSlides" data-slide-to="0" class="active"></li>
+							<li data-target="#kmSlides" data-slide-to="1"></li>
+						</ol>
 
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item active">
-							<img src="images/CSE167/terrain.png" alt="terrain.png">
-						</div>
-						<div class="item">
-							<img src="images/CSE167/crash.png" alt="crash.png">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="images/CSE167/terrain.png" alt="terrain.png">
+							</div>
+							<div class="item">
+								<img src="images/CSE167/crash.png" alt="crash.png">
+							</div>
+
 						</div>
 
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#kmSlides" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#kmSlides" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
 					</div>
-
-					<!-- Left and right controls -->
-					<a class="left carousel-control" href="#kmSlides" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#kmSlides" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-						<span class="sr-only">Next</span>
-					</a>
 				</div>
-				<p><br></p>
 				<a class="btn btn-primary" href="downloads/kart_mania_macOS.zip" role="button">Download for MacOS</a>
 				<a class="btn btn-primary" href="downloads/kart_mania_linux.zip" role="button">Download for Linux</a>
 				<a class="btn btn-primary" href="https://cse167project.wordpress.com/" role="button" target="_blank">Project Report</a>
