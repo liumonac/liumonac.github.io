@@ -23,7 +23,7 @@
 		<!-- Navigation Bar Holder -->
 		<nav id="navbar" class="sideBarContainer">
 			<div id="sideHeader" class="sidebar-header">
-				<h3>Bootstrap Sidebar</h3>
+				<h3>Monica Liu</h3>
 			</div>
 
 			<div id="topHeader" class="navbar-header">
@@ -33,7 +33,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Project name</a>
+				<a class="navbar-brand" href="#">Monica Liu</a>
 			</div>
 
 			<div id="optionsList">
