@@ -52,6 +52,11 @@ a, a:hover, a:focus {
     max-height: 600px;
 }
 
+.video {
+    max-width: 400px;
+    height: auto;
+}
+
 
 /* ---------------------------------------------------
     CONTENT STYLE
