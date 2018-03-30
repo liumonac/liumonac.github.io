@@ -17,6 +17,8 @@ function initializePage() {
 
 	//Change active list item
 	$(".menuOption").click(activateItem);
+
+	$(".btn").click(removeFocus);
 }
 
 /* ---------------------------------------------------
@@ -28,10 +30,14 @@ function activateItem () {
 	// If this isn't already active
 	if (!$(this).hasClass("active")) {
 		// Remove the class from anything that is active
-		$("li.active").removeClass("active");
+		$(".menuOption").removeClass("active");
 		// And make this active
 		$(this).addClass("active");
 	}
+}
+
+function removeFocus() {
+	$(this).blur();
 }
 
 //check which navigation bar to use, mobile or full version
