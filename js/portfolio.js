@@ -16,7 +16,8 @@ function initializePage() {
 	$(".menuOption > ul > li > a").click(smoothScroll);
 
 	//Change active list item
-	$(".menuOption").click(activateItem);
+	$(".menuOption").click(activateMenuItem);
+	$(".subOption").click(activateSubItem);
 
 	$(".btn").click(removeFocus);
 }
@@ -25,8 +26,10 @@ function initializePage() {
 	NavBar functions
 ----------------------------------------------------- */
 
+var subOptionclicked = false;
+
 //Change active list item
-function activateItem () {
+function activateMenuItem () {
 	// If this isn't already active
 	if (!$(this).hasClass("active")) {
 		// Remove the class from anything that is active
@@ -34,6 +37,21 @@ function activateItem () {
 		// And make this active
 		$(this).addClass("active");
 	}
+	if (!subOptionclicked) {
+		$(".subOption").removeClass("active");
+	}
+	subOptionclicked = false;
+}
+
+function activateSubItem () {
+	// If this isn't already active
+	if (!$(this).hasClass("active")) {
+		// Remove the class from anything that is active
+		$(".subOption").removeClass("active");
+		// And make this active
+		$(this).addClass("active");
+	}
+	subOptionclicked = true;
 }
 
 function removeFocus() {

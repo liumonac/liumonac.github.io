@@ -47,6 +47,11 @@ a, a:hover, a:focus {
     text-shadow: 2px 2px 4px #000000;
 }
 
+.carousel.limitSize {
+    max-width: 800px;
+    max-height: 600px;
+}
+
 
 /* ---------------------------------------------------
     CONTENT STYLE
