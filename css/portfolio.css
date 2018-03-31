@@ -33,8 +33,12 @@ a, a:hover, a:focus {
     width: 100%;
     height: 1px;
     border-bottom: 1px dashed #ddd;
-    margin: 40px 0;
+    margin: 50px 0;
 }
+
+/* ---------------------------------------------------
+    VIDEO/IMAGE STYLE
+----------------------------------------------------- */
 
 .carousel-caption {
     color: #ffffff;
@@ -79,7 +83,7 @@ a, a:hover, a:focus {
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
-#content {
+.pageContent {
     width: calc(100% - 250px);
     padding: 40px;
     min-height: 100vh;
@@ -87,6 +91,10 @@ a, a:hover, a:focus {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+#content h3 {
+    padding-top: 50px;
 }
 
 /* ---------------------------------------------------
@@ -141,7 +149,7 @@ footer {
         width: 100%;
     }
 
-    #content {
+    .pageContent {
         width: 100%;
     }
 
@@ -156,7 +164,7 @@ footer {
         width: calc(100% - 250px);
     }
 
-    #content {
+    .pageContent {
         width: calc(100% - 250px);
     }
 
